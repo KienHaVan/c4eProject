@@ -38,4 +38,11 @@
         flex: 1;
         justify-content: space-evenly;
     }
+    .main {
+        margin: 0 10px;
+    }
+    
+    .main__header {
+        padding: 0 10px;
+    }
 }
