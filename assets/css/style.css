@@ -388,7 +388,7 @@
 .trendingList-item-tag::before {
     content: "";
     position: absolute;
-    border-width: 15px 20px;
+    border-width: 14px 20px;
     border-style: solid;
     border-color: transparent transparent transparent red;
     top: 0;
