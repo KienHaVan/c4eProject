@@ -5,6 +5,8 @@ const openSidebarBtn = $(".main__header-icon");
 const closeSidebarBtn = $(".menu__sidebar-close");
 const menuSidebar = $(".menu__sidebar");
 const sidebarItems = $$(".menu__sidebar-item");
+const subcription = $(".subcription");
+const premiumBtn = $(".premium-item");
 let showingIndex;
 
 const headerNavbarItems = $$(".header__navBar li");
@@ -79,3 +81,23 @@ headerNavbarItems.forEach((headerNavbarItem) => {
         headerNavbarItem.classList.add("active");
     });
 });
+
+// Xử lí nút premium
+premiumBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    showSubcription();
+});
+
+overlay.addEventListener("click", () => {
+    hideSubcription();
+});
+
+function showSubcription() {
+    subcription.style.display = "flex";
+    overlay.style.display = "block";
+}
+
+function hideSubcription() {
+    subcription.style.display = "none";
+    overlay.style.display = "none";
+}
