@@ -39,10 +39,10 @@
         justify-content: space-evenly;
     }
     .main {
-        margin: 0;
+        margin: 0 4px;
     }
     
     .main__header {
-        padding: 0;
+        padding: 0 4px;
     }
 }
