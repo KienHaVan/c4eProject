@@ -313,11 +313,11 @@
     font-size: 20px;
 }
 
-.menu__sidebar-item:hover i {
+.menu__sidebar-item.active i {
     color: white;
 }
 
-.menu__sidebar-item:hover span {
+.menu__sidebar-item.active span {
     color: white;
 }
 
