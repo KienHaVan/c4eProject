@@ -410,6 +410,7 @@
     display: block;
     font-size: 16px;
     margin-bottom: 6px;
+    line-height: 1.5;
 }
 
 .trendingList-item-content h3 {
@@ -586,6 +587,7 @@
     display: block;
     font-size: 16px;
     margin-bottom: 6px;
+    line-height: 1.5;
 }
 .blockbuster__item-content h3 {
     display: block;
