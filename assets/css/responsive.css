@@ -25,6 +25,19 @@
         width: 7px;
         height: 20px;
     }
+
+    .subcription {
+        gap: 10px;
+    }
+
+    .subcription__choice {
+        height: 80%;
+        padding: 32px;
+    }
+    
+    .choice__btn {
+        bottom: 32px;
+    }
 }
 /* tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
@@ -49,5 +62,9 @@
     
     .main__header {
         padding: 0 4px;
+    }
+    
+    .subcription {
+        height: 200vh;
     }
 }

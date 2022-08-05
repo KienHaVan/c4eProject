@@ -170,7 +170,8 @@
 }
 
 .subcription {
-    background-color: var(--background-color);
+    /* background-color: #f2f3f5; */
+    background: linear-gradient(to bottom, #2cccff, #20E3B2);
     position: fixed;
     left: 16%;
     right: 16%;
@@ -187,17 +188,28 @@
 }
 
 .subcription__choice {
-    background-color: #010101;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;;
     flex-direction: column;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 54px;
     border-radius: 20px;
-    color: #94a1b2;
+    color: #63687e;
     font-weight: normal;
     position: relative;
+    height: 90%;
+    font-weight: 300;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+    transition: all .2s linear;
 }
+
+.subcription__choice:hover {
+    transform: scale(1.07);
+}
+
+.subcription__choice
 .choice__title b,
 .choice__title {
     font-size: 30px;
@@ -212,9 +224,16 @@
     margin: 30px 0;
 }
 
-.choice__desc p {
+.choice__desc div {
     font-size: 20px;
-    margin: 16px 0;
+    text-align: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #999;
+}
+
+.choice__desc div span {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .choice__btn {
@@ -225,6 +244,20 @@
     border-radius: 10px;
     cursor: pointer;
     color: white;
+    position: absolute;
+    bottom: 54px;
+}
+
+.basic-btn {
+    background-color: #20E3B2;
+}
+
+.pro-btn {
+    background-color: #FF6651;
+}
+
+.choice__btn:hover {
+    opacity: 0.7;
 }
 
 /* MAIN HEADER */
