@@ -1,0 +1,18 @@
+.main__movie {
+    padding-top: 64px;
+    /* display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; */
+}
+
+.movie__header {
+    font-size: 3rem;
+    padding: 40px 0;
+    color: var(--title-color);
+} 
+
+
+.main__movie video {
+    border-radius: 10px;
+    width: 100%;
+}
