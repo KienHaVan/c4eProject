@@ -36,7 +36,7 @@
 
     .subcription__choice {
         height: 80%;
-        padding: 20px;
+        padding: 26px;
         height: 70%;
     }
     
@@ -50,6 +50,10 @@
 }
 /* mobile */
 @media (max-width: 739px) {
+    :root {
+        --subcription-text-size: 1rem;
+        --subcription-title-size: 1.6rem;
+    }
     .blockbuster__list {
         grid-template-columns: repeat(2,1fr);
     }
@@ -72,11 +76,16 @@
     .subcription {
         flex-direction: column;
         justify-content: flex-start;
-        /* height: 200vh; */
+        left: 12%;
+        right: 12%;
+        top: 2%;
+        bottom: 2%;
     }
 
     .subcription__choice {
-        height: 500px;
+        height: 300px;
+        padding: 16px;
+        font-size: 10px !important;
     }
 
     .overlay {

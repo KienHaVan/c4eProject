@@ -215,33 +215,33 @@
 .subcription__choice
 .choice__title b,
 .choice__title {
-    font-size: 30px;
+    font-size: var(--subcription-title-size);
     letter-spacing: 1.5px;
 }
 .choice__price sup {
-    font-size: 30px;
+    font-size: var(--subcription-title-size);
 }
 
 .choice__price {
-    font-size: 60px;
+    font-size: calc(2*var(--subcription-title-size));
     margin: 30px 0;
 }
 
 .choice__desc div {
-    font-size: 20px;
+    font-size: var(--subcription-text-size);
     text-align: center;
     padding: 8px 0;
     border-bottom: 1px solid #999;
 }
 
 .choice__desc div span {
-    font-size: 20px;
+    font-size: var(--subcription-text-size);
     font-weight: bold;
 }
 
 .choice__btn {
     padding: 16px 40px;
-    font-size: 20px;
+    font-size: var(--subcription-text-size);
     background-color: var(--text-color);
     margin-top: 30px;
     border-radius: 10px;

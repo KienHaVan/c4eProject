@@ -5,6 +5,8 @@
     --title-color: orange;
     --secondary-background-color: #1a161e;
     --primary-font: 'Poppins', sans-serif;
+    --subcription-text-size: 2rem;
+    --subcription-title-size: 3rem;
 }
 
 * {
