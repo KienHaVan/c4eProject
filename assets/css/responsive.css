@@ -27,16 +27,21 @@
     }
 
     .subcription {
-        gap: 10px;
+        gap: 16px;
+        left: 12%;
+        right: 12%;
+        top: 20%;
+        bottom: 20%;
     }
 
     .subcription__choice {
         height: 80%;
-        padding: 32px;
+        padding: 20px;
+        height: 70%;
     }
     
     .choice__btn {
-        bottom: 32px;
+        bottom: 20px;
     }
 }
 /* tablet */
@@ -65,6 +70,16 @@
     }
     
     .subcription {
-        height: 200vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* height: 200vh; */
+    }
+
+    .subcription__choice {
+        height: 500px;
+    }
+
+    .overlay {
+        /* height: 200vh; */
     }
 }
