@@ -331,7 +331,7 @@
     content: "";
     position: absolute;
     left: 50%;
-    bottom: -4px;
+    bottom: -8px;
     width: 0%;
     height: 2px;
     background-color: red;
@@ -498,6 +498,7 @@
     z-index: 2;
     color: white;
     border-radius: 6px;
+    width: 100%;
 }
 
 .trendingList-item-content h2 {
@@ -675,6 +676,7 @@
     bottom: 0px;
     left: 0;
     z-index: 2;
+    width: 100%;
 }
 
 .blockbuster__item-content h2 {
