@@ -93,11 +93,11 @@ overlay.addEventListener("click", () => {
 });
 
 function showSubcription() {
-    subcription.style.display = "flex";
+    subcription.classList.add("is-showing");
     overlay.style.display = "block";
 }
 
 function hideSubcription() {
-    subcription.style.display = "none";
+    subcription.classList.remove("is-showing");
     overlay.style.display = "none";
 }

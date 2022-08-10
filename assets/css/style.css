@@ -72,7 +72,7 @@
 }
 
 .header__navBar li.active a {
-    color: var(--hover-text-color);
+    color: var(--title-color);
 }
 
 .navBar {
@@ -135,7 +135,7 @@
 }
 
 .navBar li:hover a{
-    color: var(--hover-text-color);
+    color: var(--title-color);
 }
 
 .navBar li:hover a::before{
@@ -184,16 +184,23 @@
     z-index: 11;
     border-radius: 30px;
     gap: 40px;
-    display: none;
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    /* grid-template-columns: repeat(2, 1fr); */
     /* height: 100vh; */
-    transition: all 0.3s linear;
+    transition: all .25s linear;
+}
+.subcription.is-showing {
+    opacity: 1;
+    visibility: visible;
 }
 
 .subcription__choice {
     background-color: #fff;
     font-family: 'Roboto', sans-serif;;
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     padding: 54px;
@@ -450,7 +457,7 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    background-color: var(--secondary-background-color);
+    /* background-color: var(--secondary-background-color); */
     overflow: hidden;
     padding: 20px 20px 40px;
     border-radius: 6px;
@@ -553,11 +560,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid var(--text-color);
 }
 
 .blockbuster__header-text{
     color: white;
-    margin: 20px 0;
     font-size: 26px;
 }
 
@@ -576,24 +586,15 @@
 .blockbuster__list{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-gap: 10px;
+    grid-gap: 20px;
     color: white;
-    padding: 10px 10px 20px;
+    /* padding: 10px 10px 20px; */
     border-radius: 6px;
-    background-color: var(--secondary-background-color);
+    /* background-color: var(--secondary-background-color); */
     overflow: hidden;
-    position: relative;
-}
-
-.blockbuster__control i {
-    font-size: 30px;
-    opacity: 0.6;
-    cursor: pointer;
-    z-index: 3;
-}
-
-.blockbuster__control i:hover {
-    opacity: 1;
+    grid-auto-flow: row;
+    /* grid-auto-rows: 2rem; */
+    padding-bottom: 2rem;
 }
 
 .blockbuster__item {
