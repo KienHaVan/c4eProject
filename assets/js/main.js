@@ -10,12 +10,11 @@ const premiumBtn = $(".premium-item");
 let showingIndex;
 
 const headerNavbarItems = $$(".header__navBar li");
-console.log(headerNavbarItems);
 
 var swiper = new Swiper(".trendingList", {
     slidesPerView: 2,
     spaceBetween: 15,
-    slidesPerGroup: 1,
+    slidesPerGroup: 2,
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {
@@ -31,6 +30,9 @@ var swiper = new Swiper(".trendingList", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+        delay: 3000,
     },
 });
 

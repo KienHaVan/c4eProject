@@ -1,52 +1,162 @@
-const data = [
+// CHỈ LƯU TRỮ DỮ LIỆU VÀ GỬI DỮ LIỆU TỪ MAIN => LOCAL STORAGE
+const blockbusterData = [
     {
         index: 0,
-        name: "KẺ CẮP MẶT TRĂNG 4: SỰ TRỖI DẬY CỦA GRU",
-        desc: "Minions: The Rise Of Gru (2022)",
-        img: "http://2phimmoi.net/wp-content/uploads/2022/08/ke-cap-mat-trang-4-su-troi-day-cua-gru-94361-thumbnail.jpg",
-        video: "https://dl.dropboxusercontent.com/s/i1jcuz7intix0fn/Minions.The.Rise.of.Gru.2022.2160p.AMZN.WEB-DL.DDP5.1.HDR.HEVC-CMRG.mp4?dl=0",
-        trailer: "https://www.youtube.com/embed/6DxjJzmYsXo",
+        name: "Phù Thủy Tối Thượng Trong Đa Vũ Trụ Hỗn Loạn",
+        desc: "Doctor Strange in the Multiverse of Madness(2022)",
+        img: "./assets/img/trending/DoctorStrange.jpg",
+        video: "https://dl.dropboxusercontent.com/s/lzn92wst237w071/Doctor.Strange.in.the.Multiverse.of.Madness.2022.1080p.WEB-DL.DDP5.1.Atmos.H.264-CMRG%20%28Vietsub%29.mp4?dl=0",
+        trailer: "https://www.youtube.com/embed/3xccmeAsy8g",
     },
     {
         index: 1,
-        name: "MÔN PHÁI VÕ MÈO: HUYỀN THOẠI MỘT CHÚ CHÓ",
-        desc: "Paws of Fury: The Legend of Hank (2022)",
-        img: "http://2phimmoi.net/wp-content/uploads/2022/07/mon-phai-vo-meo-huyen-thoai-mot-chu-cho-92703-thumbnail.jpg",
+        name: "Sinh Vật Huyền Bí: Những Bí Mật Của Dumbledore",
+        desc: "Fantastic Beasts: The Secrets of Dumbledore (2022)",
+        img: "./assets/img/trending/FantasticBeasts.jpg",
         video: "https://dl.dropboxusercontent.com/s/rzow3rcf17amj5u/Transformers.Age.of.Extinction.2014.ViE.1080p.BluRay.DTS.x264-LolHD.VAV%20%282%29.mp4?dl=0",
-        trailer: "https://www.youtube.com/embed/ONHBaC-pfsk",
+        trailer: "https://www.youtube.com/embed/Y9dr2zw-TXQ",
+    },
+    {
+        index: 2,
+        name: "Thế Giới Khủng Long 3: Lãnh Địa",
+        desc: "Jurassic World: Dominion (2022)",
+        img: "./assets/img/trending/JurassicWorld.jpg",
+        video: "https://dl.dropboxusercontent.com/s/rzow3rcf17amj5u/Transformers.Age.of.Extinction.2014.ViE.1080p.BluRay.DTS.x264-LolHD.VAV%20%282%29.mp4?dl=0",
+        trailer: "https://www.youtube.com/embed/fb5ELWi-ekk",
+    },
+    {
+        index: 3,
+        name: "Kingsman: Khởi Nguồn",
+        desc: "The King's Man (2022)",
+        img: "./assets/img/trending/Kingsman.jpg",
+        video: "https://dl.dropboxusercontent.com/s/rzow3rcf17amj5u/Transformers.Age.of.Extinction.2014.ViE.1080p.BluRay.DTS.x264-LolHD.VAV%20%282%29.mp4?dl=0",
+        trailer: "https://www.youtube.com/embed/5zdBG-iGfes",
+    },
+    {
+        index: 4,
+        name: "Ma Trận: Hồi Sinh",
+        desc: "The Matrix Resurrections (2022)",
+        img: "./assets/img/trending/Matrix.jpg",
+        video: "https://dl.dropboxusercontent.com/s/rzow3rcf17amj5u/Transformers.Age.of.Extinction.2014.ViE.1080p.BluRay.DTS.x264-LolHD.VAV%20%282%29.mp4?dl=0",
+        trailer: "https://www.youtube.com/embed/9ix7TUGVYIo",
+    },
+    {
+        index: 5,
+        name: "Kẻ Cắp Mặt Trăng 4 : Sự Trỗi Dậy Của Gru",
+        desc: "Minions: The Rise Of Gru (2022)",
+        img: "./assets/img/trending/minions.jpg",
+        video: "https://dl.dropboxusercontent.com/s/rzow3rcf17amj5u/Transformers.Age.of.Extinction.2014.ViE.1080p.BluRay.DTS.x264-LolHD.VAV%20%282%29.mp4?dl=0",
+        trailer: "https://www.youtube.com/embed/6DxjJzmYsXo",
+    },
+    {
+        index: 6,
+        name: "Giáo Sư Ma Cà Rồng",
+        desc: "Morbius (2022)",
+        img: "./assets/img/trending/Morbius.jpg",
+        video: "https://dl.dropboxusercontent.com/s/rzow3rcf17amj5u/Transformers.Age.of.Extinction.2014.ViE.1080p.BluRay.DTS.x264-LolHD.VAV%20%282%29.mp4?dl=0",
+        trailer: "https://www.youtube.com/embed/Y9dr2zw-TXQ",
+    },
+    {
+        index: 7,
+        name: "Đấu Trường Âm Nhạc 2",
+        desc: "Sing 2 (2022)",
+        img: "./assets/img/trending/Sing2.jpg",
+        video: "https://dl.dropboxusercontent.com/s/rzow3rcf17amj5u/Transformers.Age.of.Extinction.2014.ViE.1080p.BluRay.DTS.x264-LolHD.VAV%20%282%29.mp4?dl=0",
+        trailer: "https://www.youtube.com/embed/Y9dr2zw-TXQ",
+    },
+    {
+        index: 8,
+        name: "Nhím Sonic 2",
+        desc: "Sonic the Hedgehog 2 (2022)",
+        img: "./assets/img/trending/sonic.jpg",
+        video: "https://dl.dropboxusercontent.com/s/rzow3rcf17amj5u/Transformers.Age.of.Extinction.2014.ViE.1080p.BluRay.DTS.x264-LolHD.VAV%20%282%29.mp4?dl=0",
+        trailer: "https://www.youtube.com/embed/Y9dr2zw-TXQ",
+    },
+    {
+        index: 9,
+        name: "Người Nhện: Không Còn Nhà",
+        desc: "Spider-Man: No Way Home (2022)",
+        img: "./assets/img/trending/spiderman.jpg",
+        video: "https://dl.dropboxusercontent.com/s/rzow3rcf17amj5u/Transformers.Age.of.Extinction.2014.ViE.1080p.BluRay.DTS.x264-LolHD.VAV%20%282%29.mp4?dl=0",
+        trailer: "https://www.youtube.com/embed/Y9dr2zw-TXQ",
+    },
+    {
+        index: 10,
+        name: "Thần Sấm 4: Tình Yêu Và Sấm Sét",
+        desc: "Thor 4: Love and Thunder (2022)",
+        img: "./assets/img/trending/thor4.jpg",
+        video: "https://dl.dropboxusercontent.com/s/rzow3rcf17amj5u/Transformers.Age.of.Extinction.2014.ViE.1080p.BluRay.DTS.x264-LolHD.VAV%20%282%29.mp4?dl=0",
+        trailer: "https://www.youtube.com/embed/Y9dr2zw-TXQ",
+    },
+    {
+        index: 11,
+        name: "Khách Sạn Huyền Bí 4: Ma Cà Rồng Biến Hình",
+        desc: "Hotel Transylvania 4: Transformania (2022)",
+        img: "./assets/img/trending/Transylvania.jpg",
+        video: "https://dl.dropboxusercontent.com/s/rzow3rcf17amj5u/Transformers.Age.of.Extinction.2014.ViE.1080p.BluRay.DTS.x264-LolHD.VAV%20%282%29.mp4?dl=0",
+        trailer: "https://www.youtube.com/embed/Y9dr2zw-TXQ",
     },
 ];
 
-localStorage.setItem("blockbuster", JSON.stringify(data));
+localStorage.setItem("blockbuster", JSON.stringify(blockbusterData));
 
-const avenger = document.querySelector(".avenger-film");
-const mainMovie = document.querySelector(".main__movie");
+const blockbusters = document.querySelectorAll(
+    ".streaming__list .blockbuster__item"
+);
 
-const output = JSON.parse(localStorage.getItem("blockbuster"))[1];
-console.log(output);
+const trendingItems = document.querySelectorAll(".trendingList-item img");
 
-mainMovie.innerHTML = `
-    <div class="movie__header">${output.name}</div>
-    <div class="movieWrapper">
-        <video
-            controls
-            poster="${output.img}"
-            <source
-            src="${output.video}"
-            type="video"
-        >
-            >
-        </video>
-    </div>
+blockbusters.forEach((blockbuster, index) => {
+    blockbuster.addEventListener("click", () => {
+        localStorage.setItem("currentChoice", index);
+    });
+    // const link = blockbuster.querySelector("a");
+    // link.href = "./movies.html";
+    // link.target = "_blank";
+});
+trendingItems.forEach((trendingItem, index) => {
+    trendingItem.addEventListener("click", () => {
+        localStorage.setItem("currentChoice", index);
+        // console.log(index);
+    });
+});
+function sendingIndex() {
+    const trendingItems = document.querySelectorAll(".trendingList-item img");
+    trendingItems.forEach((trendingItem, index) => {
+        trendingItem.addEventListener("click", () => {
+            localStorage.setItem("currentChoice", index);
+            // console.log(index);
+        });
+    });
+}
 
-    <div class="movie__trailer">Trailer</div>
-    <div class="trailerWrapper">
-        <iframe
-            src="${output.trailer}"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-        ></iframe>
-    </div>
-`;
+// const mainMovie = document.querySelector(".main__movie");
+
+// const output = JSON.parse(localStorage.getItem("blockbuster"));
+// console.log(mainMovie);
+
+// mainMovie.innerHTML = `
+//     <div class="movie__header">${output.name}</div>
+//     <div class="movieWrapper">
+//         <video
+//             controls
+//             poster="${output.img}"
+//             <source
+//             src="${output.video}"
+//             type="video"
+//         >
+//             >
+//         </video>
+//     </div>
+
+//     <div class="movie__trailer">Trailer</div>
+//     <div class="trailerWrapper">
+//         <iframe
+//             src="${output.trailer}"
+//             title="YouTube video player"
+//             frameborder="0"
+//             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+//             allowfullscreen
+//         ></iframe>
+//     </div>
+// `;
