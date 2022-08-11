@@ -1,0 +1,112 @@
+:root {
+    /* --background-color: #0d0d0f; */
+    --background-color: black;
+    --text-color: #68696f;
+    --hover-text-color: #dbcfcf;
+    --title-color: orange;
+    /* --secondary-background-color: #1a161e; */
+    --secondary-background-color: #12222d;
+    --primary-font: "Poppins", sans-serif;
+    --subcription-text-size: 2rem;
+    --subcription-title-size: 3rem;
+    --text-color: rgba(255, 255, 255, 0.74);
+    --success-color: #2691d9;
+    --error-color: rgb(241, 68, 68);
+}
+html {
+    font-size: 62.5%;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background-color: var(--background-color);
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+}
+.container {
+    width: 400px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(-_background-color);
+    padding: 40px;
+    border: 2px solid rgb(100, 100, 100);
+    box-shadow: 0 0 2rem 1rem rgba(100, 100, 100, 0.199);
+}
+.container h1 {
+    text-align: center;
+    /* text-transform: uppercase; */
+    color: var(--title-color);
+}
+.form-control {
+    width: 100%;
+    position: relative;
+    margin-top: 40px;
+}
+.form-control input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid white;
+    padding: 4px 8px;
+    background-color: transparent;
+    color: white;
+}
+.form-control span {
+    position: absolute;
+    border-bottom: 3px solid var(--success-color);
+    left: 0;
+    top: 37px;
+    width: 0%;
+    transition: 1s;
+}
+
+.form-control input:focus ~ span {
+    width: 100%;
+}
+.form-control.error small {
+    color: var(--error-color);
+    /* border-bottom: var(--error-color); */
+}
+.form-control.error input {
+    border-bottom: 3px solid var(--error-color);
+}
+
+.submit {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    background-color: var(--success-color);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5rem 0 2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.submit:hover {
+    background: #08609a;
+}
+.signup-link {
+    text-align: center;
+    color: aliceblue;
+}
+.signup-link a {
+    color: var(--success-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+.signup-link a:hover {
+    text-decoration: underline;
+}

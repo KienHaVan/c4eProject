@@ -51,6 +51,7 @@ overlay.addEventListener("click", () => {
 
 function openSidebar() {
     menuSidebar.style.display = "block";
+    // menuSidebar.classList.add("showing");
     overlay.style.display = "block";
 }
 

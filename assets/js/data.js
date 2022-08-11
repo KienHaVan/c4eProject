@@ -103,6 +103,13 @@ localStorage.setItem("blockbuster", JSON.stringify(blockbusterData));
 const blockbusters = document.querySelectorAll(
     ".streaming__list .blockbuster__item"
 );
+const series = document.querySelectorAll(".series__list .blockbuster__item");
+const tvshows = document.querySelectorAll(".tvshows__list .blockbuster__item");
+const cartoons = document.querySelectorAll(".cartoon__list .blockbuster__item");
+
+// const blockbusters = document.querySelectorAll(
+//     ".streaming__list .blockbuster__item"
+// );
 
 const trendingItems = document.querySelectorAll(".trendingList-item img");
 
@@ -110,9 +117,21 @@ blockbusters.forEach((blockbuster, index) => {
     blockbuster.addEventListener("click", () => {
         localStorage.setItem("currentChoice", index);
     });
-    // const link = blockbuster.querySelector("a");
-    // link.href = "./movies.html";
-    // link.target = "_blank";
+});
+series.forEach((serie, index) => {
+    serie.addEventListener("click", () => {
+        localStorage.setItem("currentChoice", index);
+    });
+});
+tvshows.forEach((tvshow, index) => {
+    tvshow.addEventListener("click", () => {
+        localStorage.setItem("currentChoice", index);
+    });
+});
+cartoons.forEach((cartoon, index) => {
+    cartoon.addEventListener("click", () => {
+        localStorage.setItem("currentChoice", index);
+    });
 });
 trendingItems.forEach((trendingItem, index) => {
     trendingItem.addEventListener("click", () => {

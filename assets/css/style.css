@@ -359,7 +359,15 @@
     padding: 16px;
     animation: sideIn 0.3s linear;
     display: none;
+    /* opacity: 0;
+    visibility: hidden; */
+    transition: all 0.25s linear;
 }
+
+/* .menu__sidebar.showing {
+    opacity: 1;
+    visibility: visible;
+} */
 
 .menu__sidebar-close {
     color: var(--text-color);
@@ -379,6 +387,8 @@
 
 .menu__sidebar-item.active .sidebarList_sub {
     display: block;
+    /* opacity: 1;
+    visibility: visible; */
 }
 
 .menu__sidebar-item span {
@@ -541,7 +551,7 @@
 
 /* MAIN BLOCKBUSTER */
 .main__blockbuster {
-    margin-top: 26px;
+    padding-top: 3rem;
     width: 100%;
     overflow: hidden;
     /* display: -webkit-box; */
