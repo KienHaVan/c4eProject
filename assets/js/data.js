@@ -134,9 +134,9 @@ cartoons.forEach((cartoon, index) => {
     });
 });
 trendingItems.forEach((trendingItem, index) => {
-    trendingItem.addEventListener("click", () => {
-        localStorage.setItem("currentChoice", index);
-        // console.log(index);
+    trendingItem.addEventListener("click", (e) => {
+        localStorage.setItem("currentChoice", e.target.dataset.index);
+        console.log(e.target.dataset.index);
     });
 });
 function sendingIndex() {
