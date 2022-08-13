@@ -83,15 +83,34 @@
     .main__header {
         padding: 0 4px;
     }
-
     .subcription {
+        gap: 16px;
+        left: 12%;
+        right: 12%;
+        top: 20%;
+        bottom: 20%;
     }
 
     .subcription__choice {
+        height: 80%;
+        padding: 20px;
+        height: 70%;
     }
 
-    .subcription__pro {
-        display: none;
+    .subcription {
+        display: flex;
+        /* flex-direction: column; */
+        /* height: 400px; */
+        overflow-x: auto;
+        scroll-snap-type: x;
+    }
+
+    .subcription__choice {
+        scroll-snap-align: start;
+    }
+
+    .subcription__basic {
+        margin-left: 3rem;
     }
 
     .overlay {
