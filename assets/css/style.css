@@ -8,6 +8,7 @@
     z-index: 10;
     height: 100vh;
     display: none;
+    backdrop-filter: blur(10px);
 }
 
 .header {
